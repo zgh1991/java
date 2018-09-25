@@ -1,6 +1,9 @@
 package org.ssm.dufy.entity;
 
-public class User {
+import java.io.Serializable;
+import java.util.Date;
+
+public class TUser implements Serializable {
     private String id;
 
     private String userName;
@@ -9,15 +12,19 @@ public class User {
 
     private Integer age;
 
+    private Date createTime;
+
+    private static final long serialVersionUID = 1L;
+
     public String getId() {
-		return id;
-	}
+        return id;
+    }
 
-	public void setId(String id) {
-		this.id = id;
-	}
+    public void setId(String id) {
+        this.id = id == null ? null : id.trim();
+    }
 
-	public String getUserName() {
+    public String getUserName() {
         return userName;
     }
 
@@ -39,5 +46,13 @@ public class User {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 }

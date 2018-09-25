@@ -1,10 +1,10 @@
 package org.ssm.dufy.service;
 
-import org.ssm.dufy.entity.User;
+import org.ssm.dufy.entity.TUser;
 
 public interface IUserService {
 
-	public User getUserById(String id);
-	void addUser(User user);
+	public TUser getUserById(String id);
+	void addUser(TUser user);
 }
 

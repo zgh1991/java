@@ -5,8 +5,8 @@ import javax.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.ssm.dufy.dao.IUserDao;
-import org.ssm.dufy.entity.User;
+import org.ssm.dufy.dao.TUserMapper;
+import org.ssm.dufy.entity.TUser;
 import org.ssm.dufy.service.IUserService;
 
 @Service("userService")
@@ -14,15 +14,15 @@ import org.ssm.dufy.service.IUserService;
 public class IUserServiceImpl  implements IUserService{
 
 	@Autowired
-	public IUserDao udao;
+	public TUserMapper udao;
 	
 	@Override
-	public User getUserById(String id) {
+	public TUser getUserById(String id) {
 		return udao.selectByPrimaryKey(id);
 	}
 
 	@Override
-	public void addUser(User user) {
+	public void addUser(TUser user) {
 		udao.insert(user);
 	}
 

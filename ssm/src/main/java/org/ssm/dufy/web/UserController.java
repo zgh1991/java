@@ -9,7 +9,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.ssm.dufy.entity.User;
+import org.ssm.dufy.entity.TUser;
 import org.ssm.dufy.service.IUserService;
 
 @Controller
@@ -23,7 +23,7 @@ public class UserController {
 		if(StringUtils.isEmpty(uid)) {
 			return "error";
 		}
-		User user = userService.getUserById(uid);
+		TUser user = userService.getUserById(uid);
 		if(user != null){
 			request.setAttribute("name", user.getUserName());
 			model.addAttribute("mame", user.getUserName());
@@ -44,7 +44,7 @@ public class UserController {
 		String userName = request.getParameter("userName");
 		String password = request.getParameter("password");
 		String age = request.getParameter("age");
-		User user = new User();
+		TUser user = new TUser();
 		user.setAge(Integer.valueOf(age));
 		user.setUserName(userName);
 		user.setPassword(password);

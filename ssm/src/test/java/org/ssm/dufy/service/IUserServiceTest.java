@@ -5,7 +5,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.ssm.dufy.entity.User;
+import org.ssm.dufy.entity.TUser;
 
 /**
  * 配置spring和junit整合，junit启动时加载springIOC容器 spring-test,junit
@@ -21,7 +21,7 @@ public class IUserServiceTest {
 	@Test
 	public void getUserByIdTest(){
 	 
-		User user = userService.getUserById("1");
+		TUser user = userService.getUserById("1");
 		System.out.println(user.getUserName());
 	}
 	

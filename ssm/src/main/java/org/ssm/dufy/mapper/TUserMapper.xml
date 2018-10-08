@@ -21,6 +21,9 @@
     delete from user_t
     where id = #{id,jdbcType=VARCHAR}
   </delete>
+   <select id="selectAllUser" resultMap="BaseResultMap">
+     select * from user_t
+    </select>
   <insert id="insert" parameterType="org.ssm.dufy.entity.TUser">
   <selectKey keyProperty="id" resultType="java.lang.String" order="BEFORE">
             select replace(uuid(), '-', '') as id from dual

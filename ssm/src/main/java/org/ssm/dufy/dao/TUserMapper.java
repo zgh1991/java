@@ -1,5 +1,7 @@
 package org.ssm.dufy.dao;
 
+import java.util.List;
+
 import org.ssm.dufy.entity.TUser;
 
 public interface TUserMapper {
@@ -14,4 +16,6 @@ public interface TUserMapper {
     int updateByPrimaryKeySelective(TUser record);
 
     int updateByPrimaryKey(TUser record);
+    
+	List<TUser> selectAllUser();
 }

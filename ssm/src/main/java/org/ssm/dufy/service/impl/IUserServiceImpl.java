@@ -1,5 +1,7 @@
 package org.ssm.dufy.service.impl;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +26,11 @@ public class IUserServiceImpl  implements IUserService{
 	@Override
 	public void addUser(TUser user) {
 		udao.insert(user);
+	}
+
+	@Override
+	public List<TUser> selectAllUser() {
+		return udao.selectAllUser();
 	}
 
 }

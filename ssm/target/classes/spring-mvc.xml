@@ -13,7 +13,7 @@
     http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd">
      
     <!-- 扫描controller（controller层注入） -->
-   <context:component-scan base-package="org.ssm.dufy.web" use-default-filters="false">
+   <context:component-scan base-package="org.ssm.dufy.controller" use-default-filters="false">
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
    
@@ -40,10 +40,32 @@
         <!-- 默认的content type -->
         <property name="defaultContentType" value="text/html"/>
     </bean>
+<!-- 上传文件  -->
+<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+     <property name="maxUploadSize" value="104857600" />
+     <property name="maxInMemorySize" value="4096" />
+     <property name="defaultEncoding" value="UTF-8"></property>
+</bean>
 
+<!-- 处理全局异常（简单版） -->
+    <!-- springmvc提供的简单异常处理器 -->
+<!-- <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+     定义默认的异常处理页面
+    <property name="defaultErrorView" value="error"/>
+    定义异常处理页面用来获取异常信息的变量名，也可不定义，默认名为exception 
+    <property name="exceptionAttribute" value="ex"/>
+    定义需要特殊处理的异常，这是重要点
+     <property name="exceptionMappings">
+        <props>
+            <prop key="org.ssm.dufy.exception.FileUploadException">upload_error</prop>
+        </props>
+    </property>
+</bean> -->
+<!-- 可以自定义异常处理  -->
+<bean class="org.ssm.dufy.exception.FileUploadExceptionResolver"></bean> 
 
     <!-- 当在web.xml 中   DispatcherServlet使用 <url-pattern>/</url-pattern> 映射时，能映射静态资源 -->
-    <mvc:default-servlet-handler />  
+    <mvc:default-servlet-handler />
 	<!-- 静态资源映射 -->
     <mvc:resources mapping="/static/**" location="/WEB-INF/static/"/>
    

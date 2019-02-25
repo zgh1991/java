@@ -6,11 +6,10 @@
 	<title>addUser</title>
 </head>
 <body>
-	<form action="<%=path %>/addUser" method="post" id="refresh">
-	    姓名：<input name="userName" value=""/>
-	    密码：<input name="password" value=""/>
-	   年龄 ：<input name="age" value="" />
-		<input type="submit" value="提交">
+	<form action="<%=path %>/fileUpload" method="post" enctype="multipart/form-data" >
+	   <input type="file" name="file">
+	   <input type="file" name="file2">
+	<input type="submit" value="upload"/>
 	</form>
 
 </body>

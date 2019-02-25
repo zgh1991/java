@@ -12,6 +12,8 @@ public interface TUserMapper {
     int insertSelective(TUser record);
 
     TUser selectByPrimaryKey(String id);
+    
+    List<TUser> selectByUserName(String userName);
 
     int updateByPrimaryKeySelective(TUser record);
 

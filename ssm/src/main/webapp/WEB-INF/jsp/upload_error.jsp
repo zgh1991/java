@@ -3,10 +3,11 @@
 <!doctype html>
 <html>
 <head>
-	<title>show name</title>
+	<title>出错啦</title>
 </head>
 <body>
-	<h1>Welcome</h1> ${name }<h1>访问此页面</h1>
+<h2>出错啦！</h2>
+	<h2> ${message } </h2>
 
 </body>
 </html>

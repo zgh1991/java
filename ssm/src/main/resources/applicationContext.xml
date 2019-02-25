@@ -20,5 +20,6 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 	</context:component-scan>
 	
 	<import resource="classpath:spring-mybatis.xml" />
+	<import resource="classpath:spring-shiro.xml" />
 	
 </beans>

@@ -1,12 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="java.util.*"%>
 <%@ include file="common/common.jsp"%>
-<!doctype html>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-	<title>show name</title>
+	<title>提示</title>
 </head>
 <body>
-	<h1>Welcome</h1> ${name }<h1>访问此页面</h1>
+<h2>您没有权限访问次，请联系系统管理员授权</h2>
 
 </body>
 </html>

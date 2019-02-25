@@ -1,2 +1,7 @@
 eclipse.preferences.version=1
+encoding//src/main/webapp/WEB-INF/jsp/addUser.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/jsp/fileList.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/jsp/gotoAddUser.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/jsp/showName.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/jsp/userList.jsp=UTF-8
 encoding/<project>=UTF-8
